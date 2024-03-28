@@ -1,0 +1,79 @@
+[
+  {
+    "school": "sorcere",
+    "name": "Szordrin",
+    "house": "Del'Armgo",
+    "arcana": 7,
+    "investigation": 4
+  },
+  {
+    "school": "sorcere",
+    "name": "Filraen",
+    "house": "Fey-Branche",
+    "arcana": 7,
+    "investigation": 5
+  },
+  {
+    "school": "sorcere",
+    "name": "Istolil",
+    "house": "Baenre",
+    "arcana": 6,
+    "investigation": 6
+  },
+  {
+    "school": "sorcere",
+    "name": "Kophyn",
+    "house": "Xorlarrin",
+    "arcana": 5,
+    "investigation": 3
+  },
+  {
+    "school": "sorcere",
+    "name": "Velkyn",
+    "house": "Duskryn",
+    "arcana": 5,
+    "investigation": 3
+  },
+  {
+    "school": "sorcere",
+    "name": "Rinnill",
+    "house": "Myzzrym",
+    "arcana": 6,
+    "investigation": 4
+  },
+  {
+    "school": "sorcere",
+    "name": "Kluthruel",
+    "house": "Ignin'rl",
+    "arcana": 5,
+    "investigation": 3
+  },
+  {
+    "school": "sorcere",
+    "name": "Bruherd",
+    "house": "Millithor",
+    "arcana": 5,
+    "investigation": 5
+  },
+  {
+    "school": "sorcere",
+    "name": "Belaern",
+    "house": "Duskryn",
+    "arcana": 0,
+    "investigation": 0
+  },
+  {
+    "school": "sorcere",
+    "name": "Krenaste",
+    "house": "Despana",
+    "arcana": 4,
+    "investigation": 2
+  },
+  {
+    "school": "sorcere",
+    "name": "Nyloth",
+    "house": "Ixit'Shii",
+    "arcana": 6,
+    "investigation": 6
+  }
+]
