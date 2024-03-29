@@ -1,7 +1,7 @@
 const { SCHOOLS } = require("../enums/schools");
 const { runner } = require("../utils/runner");
 const { saver } = require("../utils/saver");
-const { printer } = require("../utils/printer");
+const { printer } = require("../utils/printers/printer");
 const { getStudents } = require("../utils/getStudents");
 const { testPrinter } = require("../utils/printers/testPrinter");
 
