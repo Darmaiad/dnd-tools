@@ -5,8 +5,8 @@ const { printer } = require("../utils/printers/printer");
 const { getStudents } = require("../utils/getStudents");
 const { testPrinter } = require("../utils/printers/testPrinter");
 
-// const { firstTest: testObj } = require('./tests/firstTest');
-const { secondTestInvestigation: testObj } = require("./tests/secondTestInvestigation");
+const { sorcereFirst: testObj } = require("../tests/sorcereFirst");
+// const { sorcere2ndInvestigation: testObj } = require("../tests/sorcere2ndInvestigation");
 
 const { name, test } = testObj;
 const students = getStudents(SCHOOLS.SORCERE);

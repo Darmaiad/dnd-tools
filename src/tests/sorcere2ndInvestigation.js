@@ -1,9 +1,9 @@
-const { SKILLS } = require("../../enums/skills");
+const { SKILLS } = require("../enums/skills");
 
-const { ARCANA } = SKILLS;
+const { ARCANA, INVESTIGATION } = SKILLS;
 
-const firstTest = {
-  name: "First Test Day 3 out of 50 2",
+const sorcere2ndInvestigation = {
+  name: "Second Test Day 10 of 50 with Investigation",
   test: [
     {
       type: ARCANA,
@@ -42,32 +42,42 @@ const firstTest = {
     },
     {
       type: ARCANA,
-      dc: 10,
-      points: 2,
-    },
-    {
-      type: ARCANA,
-      dc: 12,
+      dc: 13,
       points: 3,
     },
     {
       type: ARCANA,
       dc: 15,
-      points: 3,
+      points: 2,
     },
     {
-      type: ARCANA,
+      type: INVESTIGATION,
+      dc: 8,
+      points: 1,
+    },
+    {
+      type: INVESTIGATION,
+      dc: 10,
+      points: 1,
+    },
+    {
+      type: INVESTIGATION,
+      dc: 12,
+      points: 1,
+    },
+    {
+      type: INVESTIGATION,
       dc: 15,
       points: 1,
     },
     {
-      type: ARCANA,
+      type: INVESTIGATION,
       dc: 18,
       points: 0.5,
     },
     {
-      type: ARCANA,
-      dc: 18,
+      type: INVESTIGATION,
+      dc: 20,
       points: 0.5,
     },
     {
@@ -77,12 +87,7 @@ const firstTest = {
     },
     {
       type: ARCANA,
-      dc: 20,
-      points: 0.25,
-    },
-    {
-      type: ARCANA,
-      dc: 20,
+      dc: 21,
       points: 0.25,
     },
     {
@@ -90,7 +95,12 @@ const firstTest = {
       dc: 22,
       points: 0.25,
     },
+    {
+      type: ARCANA,
+      dc: 23,
+      points: 0.25,
+    },
   ],
 };
 
-module.exports = { firstTest };
+module.exports = { sorcere2ndInvestigation };
