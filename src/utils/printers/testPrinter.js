@@ -1,4 +1,4 @@
-const colors = require('colors');
+const colors = require("colors");
 
 const testPrinter = (name, test) => {
   const pointsTotal = test.reduce((acc, { points }) => {
@@ -15,15 +15,13 @@ const testPrinter = (name, test) => {
     return acc;
   }, {});
 
-  console.log(
-    colors.blue(`${name}:\nQuestions: ${test.length} Points: ${pointsTotal}`)
-  );
+  console.log(colors.blue(`${name}:\nQuestions: ${test.length} Points: ${pointsTotal}`));
 
   Object.entries(pointsPerSkill).forEach(([k, v]) =>
-    console.log(colors.green(`${k.charAt(0).toUpperCase()}${k.slice(1)}: ${v}`))
+    console.log(colors.green(`${k.charAt(0).toUpperCase()}${k.toLocaleLowerCase().slice(1)}: ${v}`))
   );
 
-  console.log('\n');
+  console.log("\n");
 };
 
 module.exports = { testPrinter };
