@@ -77,108 +77,101 @@
     "investigation": 6
   },
   {
-    "school": "melee_magthere",
+    "school": "melee-magthere",
     "name": "Yuimmar",
     "house": "Higure",
     "acrobatics": 2,
     "athletics": 6
   },
   {
-    "school": "melee_magthere",
+    "school": "melee-magthere",
     "name": "Bhintel",
     "house": "Hunzrin",
     "acrobatics": 5,
     "athletics": 2
   },
   {
-    "school": "melee_magthere",
+    "school": "melee-magthere",
     "name": "Coborel",
     "house": "Giir",
     "acrobatics": 6,
     "athletics": 0
   },
   {
-    "school": "melee_magthere",
+    "school": "melee-magthere",
     "name": "Alton",
     "house": "Strale",
     "acrobatics": 6,
     "athletics": 0
   },
   {
-    "school": "melee_magthere",
+    "school": "melee-magthere",
     "name": "Rystiel",
     "house": "Duskryn",
     "acrobatics": 5,
     "athletics": 1
   },
   {
-    "school": "melee_magthere",
+    "school": "melee-magthere",
     "name": "Xalyth",
     "house": "Melarn",
     "acrobatics": 6,
     "athletics": 1
   },
   {
-    "school": "melee_magthere",
+    "school": "melee-magthere",
     "name": "Baragh",
     "house": "Ulanthaloth",
     "acrobatics": 6,
     "athletics": 4
   },
   {
-    "school": "melee_magthere",
+    "school": "melee-magthere",
     "name": "Sengo",
     "house": "T'orgh",
     "acrobatics": 1,
     "athletics": 5
   },
   {
-    "school": "melee_magthere",
+    "school": "melee-magthere",
     "name": "Lirdnolu",
     "house": "Vandree",
     "acrobatics": 1,
     "athletics": 5
   },
   {
-    "school": "melee_magthere",
+    "school": "melee-magthere",
     "name": "Ilphrin",
     "house": "Duskryn",
     "acrobatics": 6,
     "athletics": 1
   },
   {
-    "school": "melee_magthere",
+    "school": "melee-magthere",
     "name": "Tolovoth",
     "house": "Del Armgo",
     "acrobatics": 1,
     "athletics": 4
   },
   {
-    "school": "melee_magthere",
+    "school": "melee-magthere",
     "name": "Danmorlin",
     "house": "Baenre",
     "acrobatics": 7,
     "athletics": 2
   },
   {
-    "school": "melee_magthere",
-    "name": "Danmorlin",
-    "house": "Baenre",
-    "acrobatics": 7,
-    "athletics": 2
-  },
-  {
-    "school": "melee_magthere",
+    "school": "melee-magthere",
     "name": "Xazu",
     "house": "Ixit'Shii",
     "acrobatics": 6,
     "athletics": 5
   },
   {
-    "school": "melee_magthere",
+    "school": "melee-magthere",
     "name": "Filthel",
     "house": "Ixit'Shii",
-    "acrobatics": 6,
-    "athletics": 5
+    "acrobatics": 5,
+    "athletics": 2
   }
 ]
