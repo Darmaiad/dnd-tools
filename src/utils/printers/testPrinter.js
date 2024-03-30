@@ -1,4 +1,4 @@
-const colors = require("colors");
+const colors = require('colors');
 
 const testPrinter = (name, test) => {
   const pointsTotal = test.reduce((acc, { points }) => {
@@ -21,7 +21,7 @@ const testPrinter = (name, test) => {
     console.log(colors.green(`${k.charAt(0).toUpperCase()}${k.toLocaleLowerCase().slice(1)}: ${v}`))
   );
 
-  console.log("\n");
+  console.log('\n');
 };
 
 module.exports = { testPrinter };

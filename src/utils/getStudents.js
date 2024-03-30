@@ -1,4 +1,4 @@
-const st = require("../students.json");
+const st = require('../students.json');
 
 const getStudents = (school) => st.filter(({ school: sc }) => sc.toUpperCase() === school);
 

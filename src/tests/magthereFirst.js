@@ -1,9 +1,9 @@
-const { SKILLS } = require("../enums/skills");
+const { SKILLS } = require('../enums/skills');
 
 const { ACROBATICS, ATHLETICS } = SKILLS;
 
 const magthereFirst = {
-  name: "Magthere First Test Day 4 out of 50",
+  name: 'Magthere First Test Day 4 out of 50 3',
   test: [
     {
       type: ACROBATICS,
