@@ -4,11 +4,15 @@
   "description": "DND Utilities",
   "main": "sessions.js",
   "scripts": {
-    "sorcere": "node ./src/utils/getTotals"
+    "sorcere": "cross-env SCHOOL=sorcere node ./src/utils/getTotals",
+    "magthere": "cross-env SCHOOL=melee-magthere node ./src/utils/getTotals"
   },
   "author": "George Filippakis",
   "license": "ISC",
   "dependencies": {
     "colors": "^1.4.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
   }
 }

@@ -3,10 +3,8 @@ const path = require('path');
 
 const { printer } = require('./printers/printer');
 
-const resultsPath = '../sorcere/results';
-
+const resultsPath = `../${process.env.SCHOOL}/results`;
 const absPath = path.resolve(__dirname, resultsPath);
-
 const files = fs.readdirSync(absPath, { withFileTypes: true });
 
 const contents = files
@@ -26,13 +24,11 @@ const contents = files
     return acc;
   }, {});
 
-const contentsAsArray = Object.values(contents);
-
-contentsAsArray.sort((a, b) => b.result - a.result);
-
-const contentsWithPlacement = contentsAsArray.map((record, i) => ({
-  ...record,
-  placement: i + 1,
-}));
-
-printer(contentsWithPlacement);
+printer(
+  Object.values(contents)
+    .sort((a, b) => b.result - a.result)
+    .map((record, i) => ({
+      ...record,
+      placement: i + 1,
+    }))
+);
