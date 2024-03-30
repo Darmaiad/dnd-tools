@@ -1,13 +1,17 @@
 const fs = require("fs");
+const path = require("path");
 
-const { printer } = require("../utils/printers/printer");
+const { printer } = require("./printers/printer");
 
-const path = "./results";
-const files = fs.readdirSync(path, { withFileTypes: true });
+const resultsPath = "../sorcere/results";
+
+const absPath = path.resolve(__dirname, resultsPath);
+
+const files = fs.readdirSync(absPath, { withFileTypes: true });
 
 const contents = files
   .map(({ name }) => name)
-  .map((fileName) => JSON.parse(fs.readFileSync(`${path}/${fileName}`, "utf8")))
+  .map((fileName) => JSON.parse(fs.readFileSync(`${absPath}/${fileName}`, "utf8")))
   .flat()
   .reduce((acc, { name, house, result }) => {
     if (!acc[`${name} ${house}`]) {

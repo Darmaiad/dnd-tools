@@ -12,4 +12,4 @@ const students = getStudents(SCHOOLS.MELEE_MAGTHERE);
 
 testPrinter(name, test);
 
-printer(saver(runner(test, students), name, "./results"));
+printer(saver(runner(test, students), name));

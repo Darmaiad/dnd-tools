@@ -13,4 +13,4 @@ const students = getStudents(SCHOOLS.SORCERE);
 
 testPrinter(name, test);
 
-printer(saver(runner(test, students), name, "./results"));
+printer(saver(runner(test, students), name));
