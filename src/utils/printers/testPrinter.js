@@ -15,7 +15,7 @@ const testPrinter = (name, test) => {
     return acc;
   }, {});
 
-  console.log(colors.blue(`${name}:\nQuestions: ${test.length} Points: ${pointsTotal}`));
+  console.log(colors.blue(`${name}\nQuestions: ${test.length} Points: ${pointsTotal}`));
 
   Object.entries(pointsPerSkill).forEach(([k, v]) =>
     console.log(colors.green(`${k.charAt(0).toUpperCase()}${k.toLocaleLowerCase().slice(1)}: ${v}`))

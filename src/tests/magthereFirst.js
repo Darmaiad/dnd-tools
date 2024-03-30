@@ -128,4 +128,4 @@ const magthereFirst = {
   ],
 };
 
-module.exports = { magthereFirst };
+module.exports = magthereFirst;

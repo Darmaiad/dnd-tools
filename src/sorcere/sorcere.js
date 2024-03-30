@@ -5,12 +5,13 @@ const { printer } = require('../utils/printers/printer');
 const { getStudents } = require('../utils/getStudents');
 const { testPrinter } = require('../utils/printers/testPrinter');
 
-const { sorcereFirst: testObj } = require('../tests/sorcereFirst');
-// const { sorcere2ndInvestigation: testObj } = require("../tests/sorcere2ndInvestigation");
+const theTest = require(`../tests/${process.env.TEST}`);
 
-const { name, test } = testObj;
+const { name, test } = theTest;
+const n = `${name} Day ${process.env.DAY}`;
+
 const students = getStudents(SCHOOLS.SORCERE);
 
-testPrinter(name, test);
+testPrinter(n, test);
 
-printer(saver(runner(test, students), name));
+printer(saver(runner(test, students), `../${process.env.SCHOOL}/results/${n}.json`));

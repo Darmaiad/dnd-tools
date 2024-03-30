@@ -4,8 +4,9 @@
   "description": "DND Utilities",
   "main": "sessions.js",
   "scripts": {
-    "sorcere": "cross-env SCHOOL=sorcere node ./src/utils/getTotals",
-    "magthere": "cross-env SCHOOL=melee-magthere node ./src/utils/getTotals"
+    "sorcere": "cross-env SCHOOL=sorcere TEST=sorcereFirst DAY=8 node ./src/sorcere/sorcere.js",
+    "sorcere-totals": "cross-env SCHOOL=sorcere node ./src/utils/getTotals.js",
+    "magthere-totals": "cross-env SCHOOL=melee-magthere node ./src/utils/getTotals.js"
   },
   "author": "George Filippakis",
   "license": "ISC",
