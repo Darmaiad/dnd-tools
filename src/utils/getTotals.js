@@ -3,7 +3,7 @@ const path = require('path');
 
 const { printer } = require('./printers/printer');
 
-const resultsPath = `../${process.env.SCHOOL}/results`;
+const resultsPath = `../${process.env.SCHOOL}-results`;
 const absPath = path.resolve(__dirname, resultsPath);
 const files = fs.readdirSync(absPath, { withFileTypes: true });
 

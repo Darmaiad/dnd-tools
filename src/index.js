@@ -12,4 +12,4 @@ const students = getStudents(process.env.SCHOOL);
 
 testPrinter(n, test);
 
-printer(saver(runner(test, students), `../${process.env.SCHOOL}/results/${n}.json`));
+printer(saver(runner(test, students), `../${process.env.SCHOOL}-results/${n}.json`));
