@@ -4,18 +4,16 @@
   "description": "DND Utilities",
   "main": "./src/index.js",
   "scripts": {
-    "sorcere": "cross-env SCHOOL=sorcere TEST=sorcereFirst DAY=10 node ./src/index.js",
+    "sorcere": "cross-env SCHOOL=sorcere TEST=sorcereFirst DAY=4 node ./src/index.js",
     "sorcere2": "cross-env SCHOOL=sorcere TEST=sorcere2ndInvestigation DAY=10 node ./src/index.js",
-    "magthere": "cross-env SCHOOL=melee-magthere TEST=magthereFirst DAY=15 node ./src/index.js",
+    "magthere": "cross-env SCHOOL=melee-magthere TEST=magthereFirst DAY=4 node ./src/index.js",
     "sorcere-totals": "cross-env SCHOOL=sorcere node ./src/utils/getTotals.js",
     "magthere-totals": "cross-env SCHOOL=melee-magthere node ./src/utils/getTotals.js"
   },
   "author": "George Filippakis",
   "license": "ISC",
   "dependencies": {
-    "colors": "^1.4.0"
-  },
-  "devDependencies": {
+    "colors": "^1.4.0",
     "cross-env": "^7.0.3"
   }
 }
