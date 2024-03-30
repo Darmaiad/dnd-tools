@@ -1,6 +1,6 @@
 const d20 = require('./dice');
 
-const runner = (test, students) => {
+module.exports = (test, students) => {
   const studentResults = students.map((student) => {
     const { name, house } = student;
 
@@ -22,5 +22,3 @@ const runner = (test, students) => {
     placement: i + 1,
   }));
 };
-
-module.exports = runner;

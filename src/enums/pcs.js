@@ -1,7 +1,5 @@
-const PCS = {
+module.exports = {
   NYLOTH: 'NYLOTH',
   FILTHEL: 'FILTHEL',
   XAZU: 'XAZU',
 };
-
-module.exports = PCS;

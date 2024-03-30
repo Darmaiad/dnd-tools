@@ -2,7 +2,7 @@ const SKILLS = require('../enums/skills');
 
 const { ARCANA } = SKILLS;
 
-const sorcereFirst = {
+module.exports = {
   name: 'Sorcere First Test',
   test: [
     {
@@ -92,6 +92,3 @@ const sorcereFirst = {
     },
   ],
 };
-
-module.exports = sorcereFirst;
-// module.exports = { sorcereFirst };

@@ -1,5 +1,3 @@
 const st = require('../students.json');
 
-const getStudents = (school) => st.filter(({ school: sc }) => sc === school);
-
-module.exports = getStudents;
+module.exports = (school) => st.filter(({ school: sc }) => sc === school);

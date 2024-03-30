@@ -4,12 +4,14 @@ const getStudents = require('./utils/getStudents');
 const printer = require('./utils/printers/printer');
 const testPrinter = require('./utils/printers/testPrinter');
 
-const theTest = require(`./tests/${process.env.TEST}`);
+const { name, test } = require(`./tests/${process.env.TEST}`);
+const fullTestName = `${name} Day ${process.env.DAY}`;
 
-const { name, test } = theTest;
-const n = `${name} Day ${process.env.DAY}`;
-const students = getStudents(process.env.SCHOOL);
+testPrinter(fullTestName, test);
 
-testPrinter(n, test);
-
-printer(saver(runner(test, students), `../${process.env.SCHOOL}-results/${n}.json`));
+printer(
+  saver(
+    runner(test, getStudents(process.env.SCHOOL)),
+    `../${process.env.SCHOOL}-results/${fullTestName}.json`
+  )
+);

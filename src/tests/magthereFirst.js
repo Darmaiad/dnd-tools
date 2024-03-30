@@ -2,7 +2,7 @@ const SKILLS = require('../enums/skills');
 
 const { ACROBATICS, ATHLETICS } = SKILLS;
 
-const magthereFirst = {
+module.exports = {
   name: 'Magthere First Test',
   test: [
     {
@@ -127,5 +127,3 @@ const magthereFirst = {
     },
   ],
 };
-
-module.exports = magthereFirst;
