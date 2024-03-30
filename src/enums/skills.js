@@ -5,4 +5,4 @@ const SKILLS = {
   ATHLETICS: 'ATHLETICS',
 };
 
-module.exports = { SKILLS };
+module.exports = SKILLS;

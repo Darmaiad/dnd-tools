@@ -1,4 +1,4 @@
-const { d20 } = require('./dice');
+const d20 = require('./dice');
 
 const studySessions = 50;
 const results = [];

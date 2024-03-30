@@ -4,4 +4,4 @@ const PCS = {
   XAZU: 'XAZU',
 };
 
-module.exports = { PCS };
+module.exports = PCS;

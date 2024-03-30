@@ -1,8 +1,8 @@
-const { runner } = require('./utils/runner');
-const { saver } = require('./utils/saver');
-const { getStudents } = require('./utils/getStudents');
-const { printer } = require('./utils/printers/printer');
-const { testPrinter } = require('./utils/printers/testPrinter');
+const runner = require('./utils/runner');
+const saver = require('./utils/saver');
+const getStudents = require('./utils/getStudents');
+const printer = require('./utils/printers/printer');
+const testPrinter = require('./utils/printers/testPrinter');
 
 const theTest = require(`./tests/${process.env.TEST}`);
 

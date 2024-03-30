@@ -1,4 +1,4 @@
-const { SKILLS } = require('../enums/skills');
+const SKILLS = require('../enums/skills');
 
 const { ARCANA, INVESTIGATION } = SKILLS;
 

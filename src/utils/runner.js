@@ -1,4 +1,4 @@
-const { d20 } = require('./dice');
+const d20 = require('./dice');
 
 const runner = (test, students) => {
   const studentResults = students.map((student) => {
@@ -23,4 +23,4 @@ const runner = (test, students) => {
   }));
 };
 
-module.exports = { runner };
+module.exports = runner;

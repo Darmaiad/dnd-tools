@@ -13,4 +13,4 @@ const saver = (results, resultsPath) => {
   return results;
 };
 
-module.exports = { saver };
+module.exports = saver;

@@ -1,4 +1,4 @@
-const { PCS } = require('../../enums/pcs');
+const PCS = require('../../enums/pcs');
 const { logger } = require('../logger');
 
 const printer = (results) => {
@@ -11,4 +11,4 @@ const printer = (results) => {
   });
 };
 
-module.exports = { printer };
+module.exports = printer;

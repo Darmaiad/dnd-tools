@@ -24,4 +24,4 @@ const testPrinter = (name, test) => {
   console.log('\n');
 };
 
-module.exports = { testPrinter };
+module.exports = testPrinter;
