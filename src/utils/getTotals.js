@@ -9,7 +9,7 @@ const files = fs.readdirSync(absPath, { withFileTypes: true });
 
 const contents = files
   .map(({ name }) => name)
-  .filter((name) => name !== '.gitignore')
+  .filter((name) => !['.gitignore', 'empty.js'].includes(name))
   .map((fileName) => JSON.parse(fs.readFileSync(`${absPath}/${fileName}`, 'utf8')))
   .flat()
   .reduce((acc, { name, house, result }) => {
