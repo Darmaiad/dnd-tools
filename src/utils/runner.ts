@@ -1,9 +1,9 @@
 import { TestQuestionInterface } from '../interfaces/TestQuestionInterface';
-import { StudentInterface } from '../interfaces/StudentInterface';
+import { StudentType } from '../interfaces/StudentType';
 import { StudentResultInterface } from '../interfaces/StudentResultInterface';
 import { d20 } from './dice';
 
-export const runner = (test: TestQuestionInterface[], students: StudentInterface[]): StudentResultInterface[] => {
+export const runner = (test: TestQuestionInterface[], students: StudentType[]): StudentResultInterface[] => {
   const studentResults = students.map((student) => {
     const { name, house } = student;
 
