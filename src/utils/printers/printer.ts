@@ -1,7 +1,7 @@
-const PCS = require('../../enums/pcs');
-const logger = require('../logger');
+import { PCS } from '../../enums/Pcs';
+import { logger } from '../logger';
 
-module.exports = (results) =>
+export const printer = (results) =>
   results.forEach((resultRecord) => {
     if (Object.values(PCS).includes(resultRecord.name.toUpperCase())) {
       logger('red', resultRecord);

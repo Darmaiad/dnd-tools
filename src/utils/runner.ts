@@ -1,6 +1,6 @@
-const d20 = require('./dice');
+import { d20 } from './dice';
 
-module.exports = (test, students) => {
+export const runner = (test, students) => {
   const studentResults = students.map((student) => {
     const { name, house } = student;
 

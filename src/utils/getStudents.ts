@@ -1,3 +1,7 @@
-const st = require('../students.json');
+// import { StudentInterface } from '../interfaces/StudentInterface';
+import { SCHOOLS } from '../enums/Schools';
+import st from '../students.json';
 
-module.exports = <T>(school: SCHOOLS): T[] => st.filter(({ school: sc }) => sc === school);
+type StudentType = typeof st;
+
+export const getStudents = (school: SCHOOLS): StudentType => st.filter(({ school: sc }) => sc === school);

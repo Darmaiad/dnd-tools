@@ -1,6 +1,6 @@
-const colors = require('colors');
+import colors from 'colors';
 
-module.exports = (name, test) => {
+export const testPrinter = (name, test) => {
   const pointsTotal = test.reduce((acc, { points }) => {
     acc += points;
     return acc;

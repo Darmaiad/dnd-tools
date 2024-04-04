@@ -1,7 +1,5 @@
-enum PCS {
+export enum PCS {
   NYLOTH = 'NYLOTH',
   FILTHEL = 'FILTHEL',
   XAZU = 'XAZU',
 }
-
-module.exports = PCS;

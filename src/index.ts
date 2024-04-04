@@ -1,17 +1,23 @@
-const runner = require('./utils/runner');
-const saver = require('./utils/saver');
-const getStudents = require('./utils/getStudents');
-const printer = require('./utils/printers/printer');
-const testPrinter = require('./utils/printers/testPrinter');
+import { getStudents } from './utils/getStudents';
+import { runner } from './utils/runner';
+import { saver } from './utils/saver';
+import { printer } from './utils/printers/printer';
+import { testPrinter } from './utils/printers/testPrinter';
 
-const { name, test } = require(`./tests/${process.env.TEST}`);
-const fullTestName = `${name} Day ${process.env.DAY}`;
+const starter = async () => {
+  const testModule = await import(`./tests/${process.env.TEST}.js`);
+  const { name, test } = testModule[process.env.TEST];
 
-testPrinter(fullTestName, test);
+  const fullTestName = `${name} Day ${process.env.DAY}`;
 
-printer(
-  saver(
-    runner(test, getStudents(process.env.SCHOOL)),
-    `../${process.env.SCHOOL}-results/${fullTestName}.json`
-  )
-);
+  testPrinter(fullTestName, test);
+
+  printer(
+    saver(
+      runner(test, getStudents(process.env.SCHOOL)),
+      `../${process.env.SCHOOL}-results/${fullTestName}.json`
+    )
+  );
+};
+
+starter();
