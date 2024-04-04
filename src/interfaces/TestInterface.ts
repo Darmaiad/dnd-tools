@@ -1,12 +1,6 @@
-import { SKILLS } from '../enums/Skills';
-
-interface Question {
-  type: SKILLS;
-  dc: number;
-  points: number;
-}
+import { TestQuestionInterface } from './TestQuestionInterface';
 
 export interface TestInterface {
   name: string;
-  test: Question[];
+  test: TestQuestionInterface[];
 }

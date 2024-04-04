@@ -1,7 +1,8 @@
-// import { StudentInterface } from '../interfaces/StudentInterface';
+import { StudentInterface } from '../interfaces/StudentInterface';
 import { SCHOOLS } from '../enums/Schools';
-import st from '../students.json';
+import students from '../students.json';
 
-type StudentType = typeof st;
-
-export const getStudents = (school: SCHOOLS): StudentType => st.filter(({ school: sc }) => sc === school);
+export const getStudents = (school: SCHOOLS): StudentInterface[] =>
+  students
+    .map((student) => ({ ...student, school: student.school as SCHOOLS })) // Typecast school as an Enum
+    .filter(({ school: sc }) => sc === school);
