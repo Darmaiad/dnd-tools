@@ -1,6 +1,9 @@
-const d20 = require('./dice');
+import { TestQuestionInterface } from '../interfaces/TestQuestionInterface';
+import { StudentType } from '../interfaces/StudentType';
+import { StudentResultInterface } from '../interfaces/StudentResultInterface';
+import { d20 } from './dice';
 
-module.exports = (test, students) => {
+export const runner = (test: TestQuestionInterface[], students: StudentType[]): StudentResultInterface[] => {
   const studentResults = students.map((student) => {
     const { name, house } = student;
 

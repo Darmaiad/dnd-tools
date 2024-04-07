@@ -1,8 +1,9 @@
-const SKILLS = require('../enums/skills');
+import { TestInterface } from '../interfaces/TestInterface';
+import { SKILLS } from '../enums/Skills';
 
 const { ARCANA } = SKILLS;
 
-module.exports = {
+export const sorcereFirst: TestInterface = {
   name: 'Sorcere First Test',
   test: [
     {
