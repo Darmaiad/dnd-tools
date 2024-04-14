@@ -1,0 +1,31 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["relationJoins"]
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model school {
+  id                             Int       @id
+  name                           String    @db.VarChar(100)
+  student_student_schoolToschool student[] @relation("student_schoolToschool")
+}
+
+model student {
+  id                            BigInt @id @default(autoincrement())
+  name                          String @db.VarChar(100)
+  house                         String @db.VarChar(100)
+  arcana                        Int?
+  investigation                 Int?
+  acrobatics                    Int?
+  athletics                     Int?
+  school                        Int
+  dead                          Int    @default(0) @db.TinyInt
+  pc                            Int    @default(0) @db.TinyInt
+  school_student_schoolToschool school @relation("student_schoolToschool", fields: [school], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "student_school_FK")
+
+  @@index([school], map: "student_school_FK")
+}
