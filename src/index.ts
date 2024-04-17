@@ -1,8 +1,8 @@
 import 'dotenv/config';
 
-import { getTest } from './utils/getTest';
+import { getTest } from './utils/repository/getTest';
 import { SCHOOLS } from './enums/Schools';
-import { getStudents } from './utils/getStudents';
+import { getStudents } from './utils/repository/getStudents';
 import { runner } from './utils/runner';
 import { saver } from './utils/saver';
 import { printer } from './utils/printers/printer';

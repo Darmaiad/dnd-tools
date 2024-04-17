@@ -1,10 +1,10 @@
 import { PrismaClient } from '@prisma/client';
 
-import { SCHOOLS } from '../enums/Schools';
-import { testSelect, TestPayload } from '../prisma/types/testResult';
-import { StudentPlacementInterface } from '../interfaces/students/StudentPlacementInterface';
-import { testTransform } from '../prisma/transformations/testTransform';
-import { printer } from './printers/printer';
+import { SCHOOLS } from '../../enums/Schools';
+import { testSelect, TestPayload } from '../../prisma/types/testResult';
+import { StudentPlacementInterface } from '../../interfaces/students/StudentPlacementInterface';
+import { testTransform } from '../../prisma/transformations/testTransform';
+import { printer } from '../printers/printer';
 
 const findTotals = async () => {
   const prisma = new PrismaClient();

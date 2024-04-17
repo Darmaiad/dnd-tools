@@ -16,7 +16,7 @@ export const testTransform = (tests: TestPayload[]): StudentPlacementInterface[]
 
   const testPlacements = testResults.reduce((acc, { name, house, result, id, pc }) => {
     if (!acc[id]) {
-      acc[id] = { name: `${name} ${house}`, result, pc };
+      acc[id] = { name, house, result, pc };
     } else {
       acc[id].result += result;
     }
