@@ -10,11 +10,11 @@ export const saver = async (
   const prisma = new PrismaClient();
 
   await prisma.$transaction((trx) =>
-    trx.test.create({
+    trx.test_result.create({
       data: {
         name,
         school: SCHOOLS[process.env.SCHOOL],
-        test_result: {
+        test_result_details: {
           create: results.map(({ id, result, placement }) => ({
             student_id: id,
             result,

@@ -1,7 +1,7 @@
 import { Prisma } from '@prisma/client';
 
 const select = {
-  test_result: {
+  test_result_details: {
     select: {
       result: true,
       student: {
@@ -16,8 +16,8 @@ const select = {
   },
 };
 
-export const testSelect = Prisma.validator<Prisma.testSelect>()(select);
+export const testSelect = Prisma.validator<Prisma.test_resultSelect>()(select);
 
-export const testSelectType = Prisma.validator<Prisma.testDefaultArgs>()({ select });
+export const testSelectType = Prisma.validator<Prisma.test_resultDefaultArgs>()({ select });
 
 export type TestPayload = Prisma.studentGetPayload<typeof testSelectType>;

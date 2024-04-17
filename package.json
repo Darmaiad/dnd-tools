@@ -7,8 +7,8 @@
     "sorcere": "cross-env SCHOOL=SORCERE TEST=sorcereFirst DAY=4 node ./build/index.js",
     "sorcere2": "cross-env SCHOOL=SORCERE TEST=sorcere2ndInvestigation DAY=10 node ./build/index.js",
     "magthere": "cross-env SCHOOL=MELEE_MAGTHERE TEST=magthereFirst DAY=4 node ./build/index.js",
-    "sorcere-totals": "cross-env SCHOOL=SORCERE node ./build/utils/getTotals.js",
-    "magthere-totals": "cross-env SCHOOL=MELEE_MAGTHERE node ./build/utils/getTotals.js"
+    "sorcere-totals": "cross-env SCHOOL=SORCERE node ./build/utils/repository/getTotals.js",
+    "magthere-totals": "cross-env SCHOOL=MELEE_MAGTHERE node ./build/utils/repository/getTotals.js"
   },
   "author": "George Filippakis",
   "license": "ISC",

@@ -4,7 +4,7 @@ import { StudentPlacementInterface } from '../../interfaces/students/StudentPlac
 
 export const testTransform = (tests: TestPayload[]): StudentPlacementInterface[] => {
   const testResults: StudentResultInterface[] = tests
-    .map(({ test_result }) => test_result)
+    .map(({ test_result_details }) => test_result_details)
     .flat()
     .map(({ result, student: { name, house, id, pc } }) => ({
       name,

@@ -9,7 +9,7 @@ import { printer } from '../printers/printer';
 const findTotals = async () => {
   const prisma = new PrismaClient();
 
-  const tests: TestPayload[] = await prisma.test.findMany({
+  const tests: TestPayload[] = await prisma.test_result.findMany({
     where: {
       school: SCHOOLS[process.env.SCHOOL],
     },
