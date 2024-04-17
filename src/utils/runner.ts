@@ -1,11 +1,11 @@
-import { TestQuestionInterface } from '../interfaces/TestQuestionInterface';
-import { StudentType } from '../interfaces/StudentType';
-import { StudentResultInterface } from '../interfaces/StudentResultInterface';
+import { TestQuestionInterface } from '../interfaces/tests/TestQuestionInterface';
+import { StudentType } from '../interfaces/students/StudentType';
+import { StudentPlacementInterface } from '../interfaces/students/StudentPlacementInterface';
 import { d20 } from './dice';
 
-export const runner = (test: TestQuestionInterface[], students: StudentType[]): StudentResultInterface[] => {
+export const runner = (test: TestQuestionInterface[], students: StudentType[]): StudentPlacementInterface[] => {
   const studentResults = students.map((student) => {
-    const { name, house } = student;
+    const { name, house, id, pc } = student;
 
     const result = test.reduce((testPoints, { type, dc, points }) => {
       const questionResult = d20() + student[type.toLowerCase()];
@@ -15,7 +15,7 @@ export const runner = (test: TestQuestionInterface[], students: StudentType[]): 
       }
       return testPoints;
     }, 0);
-    return { name, house, result };
+    return { name, house, result, id: Number(id), pc };
   });
 
   studentResults.sort((a, b) => b.result - a.result);

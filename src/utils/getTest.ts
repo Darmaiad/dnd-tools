@@ -1,4 +1,4 @@
-import { TestInterface } from '../interfaces/TestInterface';
+import { TestInterface } from '../interfaces/tests/TestInterface';
 import { testPrinter } from '../utils/printers/testPrinter';
 
 export const getTest = async (): Promise<TestInterface> => {

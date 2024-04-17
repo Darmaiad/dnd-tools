@@ -9,9 +9,11 @@ import { printer } from './utils/printers/printer';
 
 const starter = async () => {
   const { name, test } = await getTest();
-  const students = await getStudents(process.env.SCHOOL as SCHOOLS);
 
-  printer(saver(runner(test, students), `../${process.env.SCHOOL}-results/${name}.json`));
+  const students = await getStudents(SCHOOLS[process.env.SCHOOL]);
+  const results = await saver(runner(test, students), name);
+
+  printer(results);
 };
 
 starter();

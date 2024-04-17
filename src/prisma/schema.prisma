@@ -12,20 +12,44 @@ model school {
   id                             Int       @id
   name                           String    @db.VarChar(100)
   student_student_schoolToschool student[] @relation("student_schoolToschool")
+  test_test_schoolToschool       test[]    @relation("test_schoolToschool")
 }
 
 model student {
-  id                            BigInt @id @default(autoincrement())
-  name                          String @db.VarChar(100)
-  house                         String @db.VarChar(100)
+  id                            BigInt        @id @default(autoincrement())
+  name                          String        @db.VarChar(100)
+  house                         String        @db.VarChar(100)
   arcana                        Int?
   investigation                 Int?
   acrobatics                    Int?
   athletics                     Int?
   school                        Int
-  dead                          Int    @default(0) @db.TinyInt
-  pc                            Int    @default(0) @db.TinyInt
-  school_student_schoolToschool school @relation("student_schoolToschool", fields: [school], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "student_school_FK")
+  dead                          Int           @default(0) @db.TinyInt
+  pc                            Int           @default(0) @db.TinyInt
+  school_student_schoolToschool school        @relation("student_schoolToschool", fields: [school], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "student_school_FK")
+  test_result                   test_result[]
 
   @@index([school], map: "student_school_FK")
+}
+
+model test {
+  id                         Int           @id @default(autoincrement())
+  name                       String        @db.VarChar(150)
+  school                     Int
+  school_test_schoolToschool school        @relation("test_schoolToschool", fields: [school], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "test_school_FK")
+  test_result                test_result[]
+
+  @@index([school], map: "test_school_FK")
+}
+
+model test_result {
+  test_id    Int
+  student_id BigInt
+  result     Float
+  placement  Int
+  student    student @relation(fields: [student_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "test_result_student_FK")
+  test       test    @relation(fields: [test_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "test_result_test_FK")
+
+  @@id([test_id, student_id])
+  @@index([student_id], map: "test_result_student_FK")
 }

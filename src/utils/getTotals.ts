@@ -1,43 +1,29 @@
-import fs from 'fs';
-import path from 'path';
+import { PrismaClient } from '@prisma/client';
 
+import { SCHOOLS } from '../enums/Schools';
+import { testSelect, TestPayload } from '../prisma/types/testResult';
+import { StudentPlacementInterface } from '../interfaces/students/StudentPlacementInterface';
+import { testTransform } from '../prisma/transformations/testTransform';
 import { printer } from './printers/printer';
 
-const resultsPath = `../${process.env.SCHOOL}-results`;
-const absPath = path.resolve(__dirname, resultsPath);
-const files = fs.readdirSync(absPath, { withFileTypes: true });
+const findTotals = async () => {
+  const prisma = new PrismaClient();
 
-interface TestRecord {
-  name: string;
-  house: string;
-  result: number;
-}
+  const tests: TestPayload[] = await prisma.test.findMany({
+    where: {
+      school: SCHOOLS[process.env.SCHOOL],
+    },
+    select: testSelect,
+  });
 
-const contents = files
-  .map(({ name }) => name)
-  .filter((name) => !['.gitignore', 'empty.js'].includes(name))
-  .map((fileName) => JSON.parse(fs.readFileSync(`${absPath}/${fileName}`, 'utf8')))
-  .flat()
-  .reduce((acc, { name, house, result }) => {
-    if (!acc[`${name} ${house}`]) {
-      acc[`${name} ${house}`] = { name, house, result };
-    } else {
-      acc[`${name} ${house}`] = {
-        name,
-        house,
-        result: (acc[`${name} ${house}`].result += result),
-      };
-    }
-    return acc;
-  }, {});
-
-const testRecords: TestRecord[] = Object.values(contents);
-
-printer(
-  testRecords
+  const theTests: StudentPlacementInterface[] = testTransform(tests)
     .sort((a, b) => b.result - a.result)
     .map((record, i) => ({
       ...record,
       placement: i + 1,
-    }))
-);
+    }));
+
+  printer(theTests);
+};
+
+findTotals();

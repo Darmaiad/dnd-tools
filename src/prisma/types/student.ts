@@ -1,6 +1,7 @@
 import { Prisma } from '@prisma/client';
 
-const studentSelector = {
+const select = {
+  id: true,
   name: true,
   house: true,
   dead: true,
@@ -9,6 +10,7 @@ const studentSelector = {
   acrobatics: true,
   athletics: true,
   investigation: true,
+  school: true,
   school_student_schoolToschool: {
     select: {
       name: true,
@@ -16,10 +18,8 @@ const studentSelector = {
   },
 };
 
-export const studentSelect = Prisma.validator<Prisma.studentSelect>()(studentSelector);
+export const studentSelect = Prisma.validator<Prisma.studentSelect>()(select);
 
-export const studentSelectType = Prisma.validator<Prisma.studentDefaultArgs>()({
-  select: studentSelector,
-});
+export const studentSelectType = Prisma.validator<Prisma.studentDefaultArgs>()({ select });
 
 export type StudentPayload = Prisma.studentGetPayload<typeof studentSelectType>;
