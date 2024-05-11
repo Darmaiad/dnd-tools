@@ -3,7 +3,7 @@ import { SKILLS } from '../enums/Skills';
 
 const { ARCANA, INVESTIGATION } = SKILLS;
 
-export const magthereFirst: TestInterface = {
+export const sorcere2ndInvestigation: TestInterface = {
   name: 'Sorcere Second Test with Investigation',
   test: [
     {
