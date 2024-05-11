@@ -1,4 +1,7 @@
 export enum SCHOOLS {
-  SOCRERE = 'sorcere',
-  MELEE_MAGTHERE = 'melee-magthere',
+  MELEE_MAGTHERE = 1,
+  SORCERE,
+  ARACH_TINILITH,
 }
+
+export type SchoolStrings = keyof typeof SCHOOLS;

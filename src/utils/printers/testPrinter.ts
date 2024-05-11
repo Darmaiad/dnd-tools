@@ -1,6 +1,6 @@
 import colors from 'colors';
 
-import { TestQuestionInterface } from '../../interfaces/TestQuestionInterface';
+import { TestQuestionInterface } from '../../interfaces/tests/TestQuestionInterface';
 
 export const testPrinter = (name: string, test: TestQuestionInterface[]) => {
   const pointsTotal = test.reduce((acc, { points }) => {

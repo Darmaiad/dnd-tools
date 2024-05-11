@@ -1,11 +1,11 @@
 // https://stackoverflow.com/a/53981706
 
-import { SCHOOLS } from './Schools';
+import { SchoolStrings } from './Schools';
 
 declare global {
   namespace NodeJS {
     interface ProcessEnv {
-      SCHOOL: SCHOOLS;
+      SCHOOL: SchoolStrings;
       DAY: string;
       TEST: string;
     }

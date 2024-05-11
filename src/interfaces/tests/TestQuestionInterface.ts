@@ -1,4 +1,4 @@
-import { SKILLS } from '../enums/Skills';
+import { SKILLS } from '../../enums/Skills';
 
 export interface TestQuestionInterface {
   type: SKILLS;

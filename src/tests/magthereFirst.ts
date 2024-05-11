@@ -1,4 +1,4 @@
-import { TestInterface } from '../interfaces/TestInterface';
+import { TestInterface } from '../interfaces/tests/TestInterface';
 import { SKILLS } from '../enums/Skills';
 
 const { ACROBATICS, ATHLETICS } = SKILLS;

@@ -1,16 +1,29 @@
-import { writeFile } from 'fs';
-import path from 'path';
+import { PrismaClient } from '@prisma/client';
 
-import { StudentResultInterface } from '../interfaces/StudentResultInterface';
+import { StudentPlacementInterface } from '../interfaces/students/StudentPlacementInterface';
+import { SCHOOLS } from '../enums/Schools';
 
-export const saver = (results: StudentResultInterface[], resultsPath: string): StudentResultInterface[] => {
-  writeFile(path.resolve(__dirname, resultsPath), JSON.stringify(results, null, 2), (error) => {
-    if (error) {
-      console.log('An error has occurred ', error);
-      return;
-    }
-    console.log('\nTest Saved Successfully');
-  });
+export const saver = async (
+  results: StudentPlacementInterface[],
+  name: string
+): Promise<StudentPlacementInterface[]> => {
+  const prisma = new PrismaClient();
+
+  await prisma.$transaction((trx) =>
+    trx.test_result.create({
+      data: {
+        name,
+        school: SCHOOLS[process.env.SCHOOL],
+        test_result_details: {
+          create: results.map(({ id, result, placement }) => ({
+            student_id: id,
+            result,
+            placement,
+          })),
+        },
+      },
+    })
+  );
 
   return results;
 };
