@@ -1,7 +1,7 @@
-const d20 = require('./dice');
+import { d20 } from './utils/dice';
 
 const studySessions = 50;
-const results = [];
+const results: number[] = [];
 const int = 3;
 
 for (let i = 0; i < studySessions; i++) {

@@ -2,18 +2,32 @@
   "name": "dnd",
   "version": "1.0.0",
   "description": "DND Utilities",
-  "main": "./src/index.js",
+  "main": "./build/src/index.js",
   "scripts": {
-    "sorcere": "cross-env SCHOOL=sorcere TEST=sorcereFirst DAY=4 node ./src/index.js",
-    "sorcere2": "cross-env SCHOOL=sorcere TEST=sorcere2ndInvestigation DAY=10 node ./src/index.js",
-    "magthere": "cross-env SCHOOL=melee-magthere TEST=magthereFirst DAY=4 node ./src/index.js",
-    "sorcere-totals": "cross-env SCHOOL=sorcere node ./src/utils/getTotals.js",
-    "magthere-totals": "cross-env SCHOOL=melee-magthere node ./src/utils/getTotals.js"
+    "sorcere": "cross-env SCHOOL=SORCERE TEST=sorcereFirst DAY=9 node ./build/index.js",
+    "sorcere2": "cross-env SCHOOL=SORCERE TEST=sorcere2ndInvestigation DAY=15 node ./build/index.js",
+    "magthere": "cross-env SCHOOL=MELEE_MAGTHERE TEST=magthereFirst DAY=15 node ./build/index.js",
+    "sorcere-totals": "cross-env SCHOOL=SORCERE node ./build/utils/repository/getTotals.js",
+    "magthere-totals": "cross-env SCHOOL=MELEE_MAGTHERE node ./build/utils/repository/getTotals.js"
   },
   "author": "George Filippakis",
   "license": "ISC",
   "dependencies": {
+    "@prisma/client": "^5.13.0",
     "colors": "^1.4.0",
-    "cross-env": "^7.0.3"
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.11",
+    "prisma": "^5.13.0",
+    "typescript": "^5.4.5"
+  },
+  "prisma": {
+    "schema": "src/prisma/schema.prisma"
+  },
+  "engines": {
+    "node": "20.12.0",
+    "npm": "10.5.1"
   }
 }

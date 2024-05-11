@@ -1,8 +1,9 @@
-const SKILLS = require('../enums/skills');
+import { TestInterface } from '../interfaces/tests/TestInterface';
+import { SKILLS } from '../enums/Skills';
 
 const { ACROBATICS, ATHLETICS } = SKILLS;
 
-module.exports = {
+export const magthereFirst: TestInterface = {
   name: 'Magthere First Test',
   test: [
     {
